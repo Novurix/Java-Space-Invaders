@@ -100,14 +100,14 @@ public class Screen extends JPanel implements ActionListener, MouseListener, Key
         for (int i = 0; i < playerBullets.length; i++) {
             if (playerBullets[i] != null) {
                 Graphics playerBulletGraphics = graphics;
-                if (player.isInvinsible) {
+                if (!player.isInvinsible) {
                     playerBulletGraphics.setColor(playerColor);
+                    playerBullets[i].render(playerBulletGraphics);
                 }
                 else {
                     playerBulletGraphics.setColor(new Color(250, 191, 42));
+                    playerBullets[i].render(playerBulletGraphics);
                 }
-
-                playerBullets[i].render(playerBulletGraphics);
             }
         }
 
