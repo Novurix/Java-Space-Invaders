@@ -288,7 +288,7 @@ public class Screen extends JPanel implements ActionListener, MouseListener, Key
 
     /* -------------------------------------------------------------------------------------- */
 
-    /* COLLISIONS */
+    /* ADDING AND DESTROYING ENTITIES */
 
     /* -------------------------------------------------------------------------------------- */
 
@@ -352,6 +352,12 @@ public class Screen extends JPanel implements ActionListener, MouseListener, Key
             }
         }
     }
+
+    /* -------------------------------------------------------------------------------------- */
+
+    /* COLLISIONS */
+
+    /* -------------------------------------------------------------------------------------- */
 
     public void EnemyPlayerCollision() {
         Rectangle playerBounds = player.receiveBounds();
