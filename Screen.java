@@ -10,6 +10,12 @@ import java.awt.event.*;
 
 public class Screen extends JPanel implements ActionListener, MouseListener, KeyListener {
 
+    /* -------------------------------------------------------------------------------------- */
+
+    /* VARIABLES */
+
+    /* -------------------------------------------------------------------------------------- */
+
     Color playerColor = new Color(36, 193, 237);
     Color enemyColor = new Color(235, 70, 70);
 
@@ -40,6 +46,12 @@ public class Screen extends JPanel implements ActionListener, MouseListener, Key
 
         timer.start();
     }
+
+    /* -------------------------------------------------------------------------------------- */
+
+    /* RENDERING */
+
+    /* -------------------------------------------------------------------------------------- */
 
     public void paint(Graphics graphics) {
         Graphics backgroundGraphics = graphics;
@@ -105,6 +117,12 @@ public class Screen extends JPanel implements ActionListener, MouseListener, Key
         }
     }
 
+    /* -------------------------------------------------------------------------------------- */
+
+    /* KEYBOARD */
+
+    /* -------------------------------------------------------------------------------------- */
+
     @Override
     public void keyTyped(KeyEvent e) {
 
@@ -150,10 +168,17 @@ public class Screen extends JPanel implements ActionListener, MouseListener, Key
         }
     }
 
+    /* -------------------------------------------------------------------------------------- */
+
+    /* MOUSE CLICK */
+
+    /* -------------------------------------------------------------------------------------- */
+
     @Override
     public void mouseClicked(MouseEvent e) {
 
     }
+
 
     @Override
     public void mousePressed(MouseEvent e) {
@@ -182,6 +207,12 @@ public class Screen extends JPanel implements ActionListener, MouseListener, Key
     public void mouseExited(MouseEvent e) {
 
     }
+
+    /* -------------------------------------------------------------------------------------- */
+
+    /* UPDATES */
+
+    /* -------------------------------------------------------------------------------------- */
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -254,6 +285,12 @@ public class Screen extends JPanel implements ActionListener, MouseListener, Key
             timerToSpawn = 0;
         }
     }
+
+    /* -------------------------------------------------------------------------------------- */
+
+    /* COLLISIONS */
+
+    /* -------------------------------------------------------------------------------------- */
 
     void CreateEnemy() {
         for (int i = 0; i < enemies.length; i++) {
